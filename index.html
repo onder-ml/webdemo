@@ -6,7 +6,7 @@
     <meta name="keywords" content="Onder Machine Learning Web Demo">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>main</title>
+    <title>Onder Output Viewer Demo</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="main.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
@@ -21,7 +21,7 @@
 		"name": "",
 		"url": "index.html"
 }</script>
-    <meta property="og:title" content="main">
+    <meta property="og:title" content="Onder Output Viewer Demo">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="index.html">
@@ -33,6 +33,15 @@
       <section class="u-align-center u-clearfix u-section-1" id="sec-8826">
         <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
           <input type="file" id="file-selector"></input>
+          <label for="pdfs">Choose an Inspection Report:</label>
+
+          <select name="pdfs" id="pdfs" onChange="changePDF(this.options[this.selectedIndex].value)">
+            <option value="https://raw.githubusercontent.com/onder-ml/webdemo/main/outputs/pdfs_12-30-2020_22_44_55_Classic-Horizon-Inspection-Report_results_results%20(3).json">Classic Horizon Inspection Report</option>
+            <option value="https://raw.githubusercontent.com/onder-ml/webdemo/main/outputs/pdfs_12-31-2020_01_10_25_2307EastmontWayW_results_results%20(1).json">2307 Eastmont Way</option>
+            <option value="https://raw.githubusercontent.com/onder-ml/webdemo/main/outputs/pdfs_12-31-2020_02_15_06_8806_Clifford_Ave_Checy_Chase_MD_results_results%20(1).json">Clifford Ave Checy Chase MD</option>
+            <option value="https://raw.githubusercontent.com/onder-ml/webdemo/main/outputs/pdfs_12-31-2020_15_42_25_ScottGilliganHomeInspectionReportSample_results_results%20(1).json">Scott Gilligan Home Inspection</option>
+            <option value="https://raw.githubusercontent.com/onder-ml/webdemo/main/outputs/pdfs_12-31-2020_16_18_57_Carson-Dunlop-Buyer-Seller-Sample-Report_results_results.json">Carson Dunlop</option>
+          </select>
           <div class="u-tab-links-align-left u-tabs u-tabs-1">
           <ul class="u-border-2 u-border-palette-1-base u-spacing-10 u-tab-list u-unstyled" role="tablist">
             <li class="u-tab-item u-tab-item-1" role="presentation">
@@ -230,10 +239,6 @@
       </div>
     </section>
     
-    
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b231"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">1/1/2021 Onder Output Viewer Demo</p>
-      </div></footer>
   </body>
   <script type="text/javascript" src='index.js'></script>
   <script>

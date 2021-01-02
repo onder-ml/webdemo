@@ -7,11 +7,11 @@ function inputItems(json) {
   // get outputs
   const categories = ["landscape", "plumbing", "electrical", "roof", "exterior", "interior", "appliances", "hvac", "structure", "garage", "kitchen", "irrelevant"]
 
-
   // go thru all the category tables
   for (let index = 0; index < categories.length; index++) {
     const category = categories[index];
     var table = document.getElementById(category + "Table");
+    table.innerHTML = '' // clear the old stuff
     items = json['filtered'][category]['content']
     for (let index = 0; index < items.length; index++) {
       const item = items[index]['text'] + " (Page " + items[index]['page'] + ")";
@@ -23,6 +23,16 @@ function inputItems(json) {
       table.insertAdjacentHTML('beforeend', newElement)
     }
   }
+}
+
+function changePDF(chosen) {
+  console.log(chosen);
+  fetch(chosen)
+  .then(res => res.json())
+  .then((out) => {
+    inputItems(out);
+  })
+  .catch(err => { throw err });
 }
 
 function parseInput(input) {

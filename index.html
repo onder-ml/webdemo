@@ -36,7 +36,8 @@
           <input type="file" id="file-selector"></input>
           <label for="pdfs">Choose an Inspection Report:</label>
 
-          <select name="pdfs" id="pdfs" onChange="changePDF(this.options[this.selectedIndex].value)">
+          <select name="pdfs" id="pdfs">
+            <option value="Nah">None</option>
             <option value="https://raw.githubusercontent.com/onder-ml/webdemo/main/outputs/pdfs_12-30-2020_22_44_55_Classic-Horizon-Inspection-Report_results_results%20(3).json">Classic Horizon Inspection Report</option>
             <option value="https://raw.githubusercontent.com/onder-ml/webdemo/main/outputs/pdfs_12-31-2020_01_10_25_2307EastmontWayW_results_results%20(1).json">2307 Eastmont Way</option>
             <option value="https://raw.githubusercontent.com/onder-ml/webdemo/main/outputs/pdfs_12-31-2020_02_15_06_8806_Clifford_Ave_Checy_Chase_MD_results_results%20(1).json">Clifford Ave Checy Chase MD</option>

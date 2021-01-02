@@ -25,16 +25,6 @@ function inputItems(json) {
   }
 }
 
-function changePDF(chosen) {
-  console.log(chosen);
-  fetch(chosen)
-  .then(res => res.json())
-  .then((out) => {
-    inputItems(out);
-  })
-  .catch(err => { throw err });
-}
-
 function parseInput(input) {
     try {
       var json = typeof(input) === 'string' ? JSON.parse(input) : input
@@ -61,5 +51,17 @@ function fileListeners() {
       const file = event.target.files[0];
       readFile(file)
   });
+  var pdfChange = document.getElementById('pdfs');
+
+  pdfChange.onchange = function() {
+    var url = document.getElementById("pdfs").value;
+    console.log(url);
+    fetch(url)
+    .then(res => res.json())
+    .then((out) => {
+      inputItems(out);
+    })
+    .catch(err => { throw err });
+    }
 }
   
